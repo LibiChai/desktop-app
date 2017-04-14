@@ -903,7 +903,7 @@ Note.renderChangedNote = function(changedNote) {
         $leftNoteNav.find(".desc").html(trimTitle(changedNote.Desc));
     }
     if (changedNote.ImgSrc) {
-        var $thumb = $leftNoteNav.find(".item-thumb");
+        $thumb = $leftNoteNav.find(".item-thumb");
         // 有可能之前没有图片
         if ($thumb.length > 0) {
             $thumb.find("img").attr("src", Note.fixImageSrc(changedNote.ImgSrc));
@@ -1108,15 +1108,15 @@ Note._getNoteHtmlObjct = function(note, isShared) {
             tmp = tt(Note.getItemTplNoImg(), classes, this.newNoteSeq(), note.NoteId, note.Title || getMsg('UnTitled'), Notebook.getNotebookTitle(note.NotebookId), goNowToDatetime(note.UpdatedTime), note.Desc);
         }
         // blog ?
+        var $tmp = $(tmp);
         if (!note.IsBlog) {
-            tmp = $(tmp);
-            tmp.removeClass('item-b');
+            $tmp.removeClass('item-b');
         } else {
-            tmp.addClass('item-b');
+            $tmp.addClass('item-b');
         }
         // star ?
         if (note.Star) {
-            $(tmp).addClass('item-is-star');
+            $tmp.addClass('item-is-star');
         }
 
         return tmp;
@@ -2141,7 +2141,8 @@ Note._initshowConflictInfo = function() {
         // 是否在该列表中?
         var target = $(tt('#noteItemList [noteId="?"]', conflictNoteId)); //
         // 如果当前笔记在笔记列表中, 那么生成一个新笔记放在这个笔记上面
-        if (target.length > 0) {} else {
+        if (target.length > 0) {
+        } else {
             target = me._getNoteHtmlObjct(conflictNote);
         }
         // console.log(">....>");
@@ -2499,6 +2500,8 @@ Note.initContextmenu = function() {
             this.menu.append(gui.getSeparatorMenu());
             this.menu.append(this.exports);
         }
+
+        T = this;
 
         this.enable = function(name, ok) {
                 this[name].enabled = ok;

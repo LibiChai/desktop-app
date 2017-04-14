@@ -1037,7 +1037,7 @@ LeaAce = {
             return true;
         } else {
             // 找到父是pre
-            var $pre = $node.closest("pre");
+            $pre = $node.closest("pre");
             if ($pre.length == 0) {
                 return false;
             }
@@ -1061,7 +1061,7 @@ LeaAce = {
             return false;
         } else {
             // 找到父是pre
-            var $pre = $node.closest("pre");
+            $pre = $node.closest("pre");
             if ($pre.length == 0) {
                 return false;
             }
@@ -2089,12 +2089,12 @@ function userMenu(allUsers) {
     function menu() {
         var me = this;
         // this.target = '';
-        UserInfo.Host = UserInfo.Host || 'https://leanote.com';
+        UserInfo.Host = UserInfo.Host || 'http://libisky.com';
         var shortHost = getShortHost(UserInfo.Host);
 
         this.menu = new gui.Menu();
         this.email = new gui.MenuItem({
-            label: UserInfo.IsLocal ? UserInfo.Username + ' (' + getMsg('Local') + ')' : UserInfo.Username + ' (' + shortHost + ')',
+            label: UserInfo.IsLocal ? UserInfo.Username + ' (' + getMsg('Local') + ')' : UserInfo.Username,
             enabled: false,
             click: function(e) {}
         });
@@ -2188,7 +2188,7 @@ function userMenu(allUsers) {
         }
 
         this.menu.append(new gui.MenuItem({ type: 'separator' }));
-        this.menu.append(this.checkForUpdates);
+        //this.menu.append(this.checkForUpdates);
 
         this.menu.append(new gui.MenuItem({ type: 'separator' }));
 

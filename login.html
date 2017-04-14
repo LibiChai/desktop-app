@@ -27,21 +27,20 @@ if(process.platform != 'darwin') {
 	</div>
 
 	<div class="bottom">
-		<a id="localAccount" onclick="openExternal('https://leanote.com/register')"  class="lang localAccount">Sign up Leanote</a>
 
-		<a id="customServer" class="lang customServer">Sign in to Self-hosted Service</a>
+		<!--<a id="customServer" class="lang customServer">Sign in to Self-hosted Service</a>-->
 
-		<!-- <a id="localAccount" class="lang localAccount">Create Local Account</a> -->
+		<!--<a id="localAccount" class="lang localAccount">Create Local Account</a>-->
 
-		<a id="loginWithLeanote" class="lang loginWithLeanote">Sign in to Leanote</a>
+		<!--<a id="loginWithLeanote" class="lang loginWithLeanote">Sign in to Leanote</a>-->
 	</div>
 
 	<section id="box">
 		<div class="drag"></div>
 		<div>
-			<div class="faq" onclick="openExternal('https://github.com/leanote/desktop-app/issues/225')"><i class="fa fa-question-circle"></i></div>
+			<div class="faq" onclick="openExternal('http://libisky.com/faq')"><i class="fa fa-question-circle"></i></div>
 			<h1 id="logo">
-				<a onclick="openExternal('https://leanote.com')" id="loadingLogo" title="leanote">
+				<a onclick="openExternal('https://libisky.com')" id="loadingLogo" title="libisky">
 					<span class="logo"></span>
 				</a>
 				<span class="lang customServer">Self-hosted Service</span>
@@ -78,11 +77,11 @@ if(process.platform != 'darwin') {
 				<form>
 					<div class="formContainer">
 						<div class="form-group form-group-1 host-group" id="hostGroup">
-						    <input type="text" placeholder="Host, https://leanote.com" class="form-control lang-placeholder" id="host" name="host">
+						    <input type="text" placeholder="Host, http://127.0.0.1:9010" class="form-control lang-placeholder" id="host" name="host">
 						</div>
 
 						<div class="form-group form-group-1">
-							<input type="text" placeholder="Username or Email" class="form-control lang-placeholder" id="email" name="email" value="">
+							<input type="text" placeholder="Username" class="form-control lang-placeholder" id="email" name="email" value="">
 						</div>
 						<div class="form-group pwd-group">
 						    <input type="password" placeholder="Password" class="form-control lang-placeholder" id="pwd" name="pwd">
@@ -94,10 +93,8 @@ if(process.platform != 'darwin') {
 					</div>
 
 					<div class="clearfix btns">
-						<a onclick="openExternal('https://leanote.com/findPassword')" class="pull-right m-t-xs"><small class="lang">Forget password?</small></a>
-						<!--
-						<a onclick="openExternal('https://leanote.com/register')" class="pull-right m-t-xs" style="margin-right: 10px"><small class="lang">Sign up</small></a>
-						-->
+						<!--<a onclick="openExternal('https://leanote.com/findPassword')" class="pull-right m-t-xs"><small class="lang">Forget password?</small></a>-->
+						<a onclick="openExternal('http://libisky.com')" class="pull-right m-t-xs" style="margin-right: 10px"><small class="lang">Libisky</small></a>
 					</div>
 				</form>
 			</div>
@@ -183,7 +180,7 @@ $(function() {
 		// console.log(33);
 		// $("#loginBtn").html("loading...").addClass("disabled");
 		if(!hasHost) {
-			host = '';
+			host = 'http://127.0.0.1:9010';
 		}
 		UserService.login(email, pwd, host, function(ret) {
 			if (ret) {
@@ -272,7 +269,7 @@ $(function() {
 	$('#customServer').click(function() {
 		$body.addClass('custom-server');
 		$host.focus();
-		hasHost = true;
+		hasHost = false;
 		hideMsg();
 	});
 

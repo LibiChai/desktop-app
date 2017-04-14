@@ -23,7 +23,7 @@ var lang = {
 		}
 
 		var curLang = Config['lang'] || sysLang || defaultLang;
-		var langData = me.readJson('public/langs/' + curLang + '.js');
+		langData = me.readJson('public/langs/' + curLang + '.js');
 		if(!langData) {
 			langData = me.readJson('public/langs/' + defaultLang + '.js');
 			if (!langData) {
