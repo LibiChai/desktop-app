@@ -34,7 +34,7 @@ var Config = {
         }
     ],
     "lang": "zh-cn",
-    "theme": "night",
+    "theme": "",
     "view": "list",
     "mdTheme": "github2"
 };
