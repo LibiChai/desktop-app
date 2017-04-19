@@ -77,7 +77,7 @@ if(process.platform != 'darwin') {
 				<form>
 					<div class="formContainer">
 						<div class="form-group form-group-1 host-group" id="hostGroup">
-						    <input type="text" placeholder="Host, http://127.0.0.1:9010" class="form-control lang-placeholder" id="host" name="host">
+						    <input type="text" placeholder="Host, http://libisky.com" class="form-control lang-placeholder" id="host" name="host">
 						</div>
 
 						<div class="form-group form-group-1">
@@ -180,7 +180,7 @@ $(function() {
 		// console.log(33);
 		// $("#loginBtn").html("loading...").addClass("disabled");
 		if(!hasHost) {
-			host = 'http://127.0.0.1:9010';
+			host = 'http://libisky.com';
 		}
 		UserService.login(email, pwd, host, function(ret) {
 			if (ret) {

@@ -1688,7 +1688,32 @@ Note.searchNote = function() {
 //---------------
 //设为blog/unset
 
+Note.ShareNoteUrl = function(target){
+     var me = Note;
 
+    var noteIds;
+    noteIds = [$(target).attr('noteId')];
+    console.log(noteIds);
+    if (isEmpty(noteIds)) {
+        return;
+    }
+
+    // 是新笔记 或 当前笔记就是它的, 则先保存之
+    Note.curChangedSaveIt(true, function() {
+        NoteService.getServerNoteIdByNoteId(noteIds[0],function(serverNodeId){
+			if(!serverNodeId){
+				callback(false);
+				return false;
+			}
+            ApiService.getShareNoteUrl(serverNodeId, function(ret) {
+                if (ret) {
+                    openExternal(UserInfo.Host+ret.Msg);
+                }
+            });
+        });
+        
+    });
+}
 Note.setNote2Blog = function(target, isBlog) {
     var me = Note;
 
@@ -2408,6 +2433,12 @@ Note.initContextmenu = function() {
                 Note.setNote2Blog(self.target, false);
             }
         });
+        this.shareNoteu = new gui.MenuItem({
+            label: getMsg("Share note"),
+            click: function(e) {
+                Note.ShareNoteUrl(self.target, false);
+            }
+        });
 
         // var ms = Note.getContextNotebooksSys(notebooks);
         // this.move.submenu = ms[0];
@@ -2453,6 +2484,7 @@ Note.initContextmenu = function() {
         if (!UserInfo.IsLocal) {
             this.menu.append(this.publicBlog);
             this.menu.append(this.unPublicBlog);
+            this.menu.append(this.shareNoteu);
             this.menu.append(gui.getSeparatorMenu());
         }
 

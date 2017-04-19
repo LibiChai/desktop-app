@@ -98,6 +98,7 @@
     "myNotebook": "我的笔记本",
     "myTag": "我的标签",
     "nav": "文档导航",
+    "Share note":"共享笔记",
     "new": "新建",
     "newMarkdown": "新建Markdown笔记",
     "newMarkdownNote": "新建Markdown笔记",
