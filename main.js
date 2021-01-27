@@ -20,9 +20,8 @@ crashReporter.start({
 // be closed automatically when the javascript object is GCed.
 var mainWindow = null;
 
-// single instance
-const shouldQuit = app.makeSingleInstance((commandLine, workingDirectory) => {
-  // Someone tried to run a second instance, we should focus our window.
+app.requestSingleInstanceLock()
+app.on('second-instance', (event, argv, cwd) => {
   if (mainWindow) {
     mainWindow.show();
     if (mainWindow.isMinimized()) {
@@ -31,10 +30,6 @@ const shouldQuit = app.makeSingleInstance((commandLine, workingDirectory) => {
     mainWindow.focus();
   }
 })
-
-if (shouldQuit) {
-  app.quit()
-}
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function() {
@@ -181,7 +176,11 @@ function openIt() {
       width: 1050, 
       height: 595, 
       frame: process.platform != 'darwin', 
-      transparent: false
+      transparent: false,
+    webPreferences: {
+      nodeIntegration: true,
+      enableRemoteModule: true
+    }
     }
   );
 

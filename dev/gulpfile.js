@@ -1,9 +1,6 @@
 'use strict';
 
-var fs = require('fs')
-var path = require('path')
 var gulp = require('gulp')
-var gutil = require('gulp-util')
 var less = require('gulp-less');
 var cleanCSS = require('gulp-clean-css');
 
@@ -24,7 +21,6 @@ gulp.task('less', function() {
         .pipe(gulp.dest(styleDir2))
         .pipe(gulp.dest(styleDir2));
 
-    gutil.log(gutil.colors.green('less ok'));
 });
 
 // 开发服务
