@@ -1326,6 +1326,39 @@ var State = {
                 $('body').removeClass('init');
                 $("#mainMask").html("");
                 $("#mainMask").hide(0);
+
+                MD = new Vditor('vditorContainer', {
+                    "cache": {
+                        "enable": false,
+                    },
+                    "mode": "ir",
+                    after() {
+                        MD.setValue()
+                    }
+                })
+                MD.setContent = function(v){
+                    setTimeout(function (){
+                        console.log('set content',v);
+                        MD.setValue(v);
+                    },200)
+                }
+                MD.getContent = function(){
+                    console.log('get content',MD.getValue());
+                    return MD.getValue();
+                }
+                // 重新refresh preview
+                MD.onResize = function () {
+                };
+
+                // aceEditor resize
+                MD.resize = function () {
+
+                };
+
+                MD.clearUndo = function () {
+
+                };
+
             }, 100);
         });
         // end
