@@ -4,7 +4,7 @@ var needle = require('needle');
 var AdmZip = require('adm-zip');
 var async = require('async');
 
-var Evt = require('evt');
+var Evt = require('../mod/evt');
 
 // 可以用全局变量
 // console.log(NoteService);

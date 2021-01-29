@@ -1,5 +1,14 @@
 {
-  "name"    : "Leanote",
-  "version" : "0.7",
-  "main"    : "main.js"
+  "name": "Leanote",
+  "version": "0.7",
+  "main": "main.js",
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "async": "^0.9.0",
+    "iconv-lite": "^0.4.15",
+    "nedb": "^1.1.1",
+    "needle": "^0.7.10",
+    "resanitize": "^0.3.0",
+    "xml2js": "^0.4.6"
+  }
 }

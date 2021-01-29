@@ -1,17 +1,17 @@
-var Common = require('common');
+var Common = require('./public/js/mod/common');
 
-var Evt = require('evt');
+var Evt = require('./public/js/mod/evt');
 var app = require('electron').remote.app; // .require('app');
 var basePath = app.getPath('appData') + '/leanote'; // /Users/life/Library/Application Support/Leanote'; // require('nw.gui').App.dataPath;
 Evt.setDataBasePath(basePath);
 
 // 所有service, 与数据库打交道
 var Service = {
-	userService: require('user'),
-	apiService: require('api'),
+	userService: require('./public/js/mod/user'),
+	apiService: require('./public/js/mod/api'),
 };
 
-var db = require('db');
+var db = require('./public/js/mod/db');
 db.initGlobal();
 
 // 全局变量
@@ -20,4 +20,4 @@ var UserService = Service.userService;
 var EvtService = require('evt');
 var CommonService = Common;
 
-var gui = require('gui');
+var gui = require('./public/js/mod/gui');
