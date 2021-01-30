@@ -639,8 +639,9 @@ $(function() {
     });
 
     // markdown编辑器paste
-    $('#left-column').on('paste', function(e) {
-        pasteImage(e);
+    $('#mdEditor').on('paste','pre', function(e) {
+        console.trace("md paste");
+
     });
 });
 
@@ -1332,18 +1333,19 @@ var State = {
                         "enable": false,
                     },
                     "mode": "ir",
-                    after() {
-                        MD.setValue()
-                    }
-                })
+                    "height": $('#mdEditor').height(),
+
+                });
+                // 注册图片剪切
+
                 MD.setContent = function(v){
+                    console.trace('set content',v);
                     setTimeout(function (){
-                        console.log('set content',v);
                         MD.setValue(v);
                     },200)
                 }
                 MD.getContent = function(){
-                    console.log('get content',MD.getValue());
+                    console.trace('get content',MD.getValue());
                     return MD.getValue();
                 }
                 // 重新refresh preview
@@ -1358,6 +1360,21 @@ var State = {
                 MD.clearUndo = function () {
 
                 };
+                MD.resizeWin = function () {
+                    $('#vditorContainer').css('height',$('#mdEditor').height())
+                }
+                MD.insertLink = function(url,text,isImage){
+                    if (isImage){
+                        MD.insertValue('!['+text+']('+url+')')
+                    }
+                }
+
+                setTimeout(function () {
+                    $('.vditor-reset').on('paste',function(e){
+                        console.trace("paste");
+                        pasteImage(e);
+                    });
+                },500)
 
             }, 100);
         });
@@ -1479,6 +1496,11 @@ function initPage(initedCallback) {
 
     ipc.on('blurWindow', function(event, arg) {
         $('body').addClass('blur');
+    });
+    ipc.on('resizeWindow', function(event, arg) {
+        if(MD){
+            MD.resizeWin()
+        }
     });
     // 后端发来event, 告诉要关闭了, 处理好后发送给后端说可以关闭了
     ipc.on('closeWindow', function(event, arg) {

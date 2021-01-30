@@ -455,6 +455,7 @@ function _setEditorContent(content, isMarkdown, preview, callback) {
 // 在web端得到图片
 const {clipboard} = require('electron');
 function pasteImage(e) {
+	console.trace("pasteImage");
 	var image = clipboard.readImage();
 	if(image) {
 		var dataUrl = image.toDataURL();
@@ -645,7 +646,7 @@ function _getEditorContent(isMarkdown) {
 	} else {
 		// return [$("#wmd-input").val(), $("#wmd-preview").html()]
 		if(MD) {
-			return [MD.getContent(), '<div>' + $("#preview-contents").html() + '</div>']
+			return [MD.getContent(), '<div>' + MD.getHTML() + '</div>']
 		} else {
 			return false;
 		}

@@ -432,6 +432,7 @@ Note.curHasChanged = function(force) {
 // 由content生成desc
 // 换行不要替换
 Note.genDesc = function(content, length) {
+    console.log("genDesc");
     if (!content) {
         return "";
     }
@@ -820,6 +821,7 @@ Note.changeNote = function(selectNoteId, isShare, needSaveChanged, callback) {
     var seq = Note.contentAjaxSeq;
 
     function setContent(ret, fromCache, seq2) {
+        console.log('------',ret)
         // 找不到内容, 就一直loading
         if (!ret) {
             console.error('取不到内容');

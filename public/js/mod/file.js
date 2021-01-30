@@ -237,6 +237,7 @@ var File = {
 
 	// data在web端获取到, 在nodejs端会有错误!!
 	pasteImage2: function(data, callback) {
+		console.trace("pasteImage2");
 		var me = this;
 		data = data.replace(/^data:image\/\w+;base64,/, "");
       	// log(User.getCurUserImagesPath());
@@ -341,6 +342,7 @@ var File = {
 	},
 
 	_addImage: function(fileId, absolutePath, callback, isForce) {
+		console.trace("addImage");
 		// var absolutePath = Evt.getBasePath() + '/' + path;
 		// 得到文件大小
 		var stat = fs.statSync(absolutePath);
@@ -364,8 +366,8 @@ var File = {
 			image.ServerFileId = fileId;
 		}
 		dbClient.images.insert(image, function(err, doc) {
-			console.log(err);
-			console.log(doc);
+			console.trace(err);
+			console.trace(doc);
 			if(err) {
 				callback && callback(false);
 			} else {

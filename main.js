@@ -145,7 +145,12 @@ function bindEvents (win) {
     if(win && win.webContents)
       win.webContents.send('blurWindow');
   });
-  
+  win.on('resize', function() {
+    console.log('resize');
+    if(win && win.webContents)
+      win.webContents.send('resizeWindow');
+  });
+
   // 以前的关闭是真关闭, 现是是假关闭了
   // 关闭,先保存数据
   win.on('close', function(e) {
