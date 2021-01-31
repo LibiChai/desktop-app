@@ -1,5 +1,5 @@
 /**
- * 导出Leanote插件
+ * 导出Libisky插件
  * @author  life life@leanote.com
  * 导出的格式为json, 后缀名为 .leanote
 
@@ -33,37 +33,37 @@ define(function() {
 	//===========
 	// start
 
-	var exportLeanote = {
+	var exportLibisky = {
 		langs: {
 			'en-us': {
-				'export': 'Export Leanote',
+				'export': 'Export Libisky',
 				'Exporting': 'Exporting',
 				'Exporting: ': 'Exporting: ',
-				'exportSuccess': 'Leanote saved successful!',
-				'exportFailure': 'Leanote saved failure!',
+				'exportSuccess': 'Libisky saved successful!',
+				'exportFailure': 'Libisky saved failure!',
 				'notExists': 'Please sync your note to ther server firslty.'
 			},
 			'de-de': {
-				'export': 'Als Leanote exportieren',
+				'export': 'Als Libisky exportieren',
 				'Exporting': 'Exportiere',
 				'Exporting: ': 'Exportiere: ',
-				'exportSuccess': 'Leanote erfolgreich gespeichert!',
-				'exportFailure': 'Leanote speichern fehlgeschlagen!',
+				'exportSuccess': 'Libisky erfolgreich gespeichert!',
+				'exportFailure': 'Libisky speichern fehlgeschlagen!',
 				'notExists': 'Bitte Notizen zuerst mit dem Server synchronisieren.'
 			},
 			'zh-cn': {
-				'export': '导出Leanote',
+				'export': '导出Libisky',
 				'Exporting': '正在导出',
 				'Exporting: ': '正在导出: ',
-				'exportSuccess': 'Leanote导出成功!',
-				'exportFailure': 'Leanote导出失败!'
+				'exportSuccess': 'Libisky导出成功!',
+				'exportFailure': 'Libisky导出失败!'
 			},
 			'zh-hk': {
-				'export': '導出Leanote',
+				'export': '導出Libisky',
 				'Exporting': '正在導出',
 				'Exporting: ': '正在導出: ',
-				'exportSuccess': 'Leanote導出成功!',
-				'exportFailure': 'Leanote導出失敗!'
+				'exportSuccess': 'Libisky導出成功!',
+				'exportFailure': 'Libisky導出失敗!'
 			}
 		},
 
@@ -122,7 +122,7 @@ define(function() {
 		    return content;
 		},
 
-		getLeanoteTime: function(t) {
+		getLibiskyTime: function(t) {
 			// 20151026T033928Z
 			// 2015 10 26 T 03 39 28 Z
 			// console.log(t);
@@ -144,7 +144,7 @@ define(function() {
 			var me = this;
 			var appVersion = Api.getCurVersion() || {version: 'unknown'};
 			var info = {
-				exportDate: me.getLeanoteTime(),
+				exportDate: me.getLibiskyTime(),
 				app: 'leanote.desktop.app.' + process.platform,
 				appVersion: appVersion.version,
 				apiVersion: '0.1',
@@ -171,8 +171,8 @@ define(function() {
 					tags: note.Tags,
 					author: Api.userService.email || Api.userService.username || '',
 					isMarkdown: note.IsMarkdown,
-					createdTime: me.getLeanoteTime(note.CreatedTime),
-					updatedTime: me.getLeanoteTime(note.UpdatedTime),
+					createdTime: me.getLibiskyTime(note.CreatedTime),
+					updatedTime: me.getLibiskyTime(note.UpdatedTime),
 					files: filesArr 
 				};
 				info.notes.push(noteInfo);
@@ -354,7 +354,7 @@ define(function() {
 						md5: base64AndMd5.md5,
 						type: attach.Type,
 						title: attach.Title,
-						createdTime: me.getLeanoteTime(attach.UpdatedTime || attach.CreatedTime),
+						createdTime: me.getLibiskyTime(attach.UpdatedTime || attach.CreatedTime),
 						isAttach: true
 					}
 				}
@@ -379,7 +379,7 @@ define(function() {
 								md5: base64AndMd5.md5,
 								type: doc.Type,
 								title: doc.Title,
-								createdTime: me.getLeanoteTime(doc.UpdatedTime || doc.CreatedTime),
+								createdTime: me.getLibiskyTime(doc.UpdatedTime || doc.CreatedTime),
 							}
 						}
 						cb();
@@ -432,7 +432,7 @@ define(function() {
 
 		loadingIsClosed: false,
 
-		exportLeanoteForNotebook: function (notebookId) {
+		exportLibiskyForNotebook: function (notebookId) {
 			var me = this;
 			if (!notebookId) {
 				return;
@@ -471,7 +471,7 @@ define(function() {
 						}
 						i++;
 						Api.loading.setProgress(100 * i / total);
-						me._exportLeanote(note, targetPath, function() {
+						me._exportLibisky(note, targetPath, function() {
 							cb();
 		        		}, i, total);
 					}, function() {
@@ -488,7 +488,7 @@ define(function() {
 			}, 1000);
 		},
 
-		exportLeanote: function (noteIds) {
+		exportLibisky: function (noteIds) {
 			var me = this;
 			if (!noteIds || noteIds.length == 0) {
 				return;
@@ -523,7 +523,7 @@ define(function() {
 					i++;
 					Api.loading.setProgress(100 * i / total);
 					Api.noteService.getNote(noteId, function(note) {
-		        		me._exportLeanote(note, targetPath, function() {
+		        		me._exportLibisky(note, targetPath, function() {
 		        			cb();
 		        		}, i, total);
 	        		});
@@ -535,7 +535,7 @@ define(function() {
 			});
 		},
 
-		_exportLeanote: function(note, path, callback, i, total) {
+		_exportLibisky: function(note, path, callback, i, total) {
 			var me = this;
 			if(!note) {
 				return;
@@ -563,9 +563,9 @@ define(function() {
 			pathInfo.nameNotExtRaw = pathInfo.nameNotExt;
 
 			// 得到可用文件的绝对路径
-			me.getExportedFilePath(pathInfo, 1, function(absLeanoteFilePath) {
+			me.getExportedFilePath(pathInfo, 1, function(absLibiskyFilePath) {
 				me.render(note, function (content) {
-					Api.commonService.writeFile(absLeanoteFilePath, content);
+					Api.commonService.writeFile(absLibiskyFilePath, content);
 					callback();
 				});
 			});
@@ -584,7 +584,7 @@ define(function() {
 		        click: (function() {
 		        	return function(noteIds) {
 		        		me.init();
-		        		me.exportLeanote(noteIds);
+		        		me.exportLibisky(noteIds);
 		        	}
 		        })()
 		    };
@@ -598,7 +598,7 @@ define(function() {
 		        click: (function() {
 		        	return function(notebookId) {
 		        		me.init();
-		        		me.exportLeanoteForNotebook(notebookId);
+		        		me.exportLibiskyForNotebook(notebookId);
 		        	}
 		        })()
 		    });
@@ -611,5 +611,5 @@ define(function() {
 		}
 	};
 
-	return exportLeanote;
+	return exportLibisky;
 });

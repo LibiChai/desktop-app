@@ -9590,7 +9590,7 @@ define('settings',[
 		fontSizeRatio: 1,
 		maxWidthRatio: 1,
 		cursorFocusRatio: 0.5,
-		defaultContent: "Leanote",
+		defaultContent: "Libisky",
 		extensionSettings: {}
 	};
 	return settings;

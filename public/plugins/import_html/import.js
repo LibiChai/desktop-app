@@ -98,7 +98,7 @@ var Import = {
       if (!body) {
         return callback(false);
       }
-      // Leanote导出为html后会自动加h1
+      // Libisky导出为html后会自动加h1
       body = body.replace(/<h1 class="title" id="leanote-title">.*?<\/h1>/, '');
       var title = this.getTitle(htmlData, filename) || getMsg('Untitled');
       // 解析里面的图片

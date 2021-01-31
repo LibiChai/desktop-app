@@ -25,8 +25,8 @@ Upgrade = {
 		},
 		'zh-cn': {
 			'Upgrade error!': "升级错误",
-			'downloadUrl': '<div style="font-size: 16px;">v2.0不支持在线升级, 请从 <a onclick="openExternal(\'http://app.leanote.com\')" href="#"><b>http://app.leanote.com</b></a> 下载最新Leanote桌面版本</div>',
-			'downloadUrlOr': '或者从 <a onclick="openExternal(\'http://app.leanote.com\')" href="#"><b>http://app.leanote.com</b></a> 下载最新Leanote桌面版本',
+			'downloadUrl': '<div style="font-size: 16px;">v2.0不支持在线升级, 请从 <a onclick="openExternal(\'http://app.leanote.com\')" href="#"><b>http://app.leanote.com</b></a> 下载最新Libisky桌面版本</div>',
+			'downloadUrlOr': '或者从 <a onclick="openExternal(\'http://app.leanote.com\')" href="#"><b>http://app.leanote.com</b></a> 下载最新Libisky桌面版本',
 			'The latest version': '新版本',
 			'is available!': '可升级',
 			'Updates:': '更新日志:',
@@ -36,12 +36,12 @@ Upgrade = {
 			'Just wait for a moment...': '请稍候',
 			'Installing...': '正在安装...',
 			'Upgrade to ': '升级到 ',
-			' successful! Please <b style="color: red">restart Leanote</b> for the changes to take effect.': ' 成功, 请<b style="color: red">重新启动Leanote</b>'
+			' successful! Please <b style="color: red">restart Libisky</b> for the changes to take effect.': ' 成功, 请<b style="color: red">重新启动Libisky</b>'
 		},
 		'zh-hk': {
 			'Upgrade error!': "升級錯誤",
-			'downloadUrl': '<div style="font-size: 16px;">v2.0不支持在線升級, 請從 <a onclick="openExternal(\'http://app.leanote.com\')" href="#"><b>http://app.leanote.com</b></a> 下載最新Leanote桌面版本</div>',
-			'downloadUrlOr': '或者從 <a onclick="openExternal(\'http://app.leanote.com\')" href="#"><b>http://app.leanote.com</b></a> 下載最新Leanote桌面版本',
+			'downloadUrl': '<div style="font-size: 16px;">v2.0不支持在線升級, 請從 <a onclick="openExternal(\'http://app.leanote.com\')" href="#"><b>http://app.leanote.com</b></a> 下載最新Libisky桌面版本</div>',
+			'downloadUrlOr': '或者從 <a onclick="openExternal(\'http://app.leanote.com\')" href="#"><b>http://app.leanote.com</b></a> 下載最新Libisky桌面版本',
 			'The latest version': '新版本',
 			'is available!': '可升級',
 			'Updates:': '更新日誌:',
@@ -51,7 +51,7 @@ Upgrade = {
 			'Just wait for a moment...': '請稍候',
 			'Installing...': '正在安裝...',
 			'Upgrade to ': '升級到 ',
-			' successful! Please <b style="color: red">restart Leanote</b> for the changes to take effect.': ' 成功, 請<b style="color: red">>重新啟動Leanote</b>'
+			' successful! Please <b style="color: red">restart Libisky</b> for the changes to take effect.': ' 成功, 請<b style="color: red">>重新啟動Libisky</b>'
 		}
 	},
 	getMsg: function(key) {
@@ -338,7 +338,7 @@ Upgrade = {
 						}
 					);
 
-					$progress.html(me.getMsg('Upgrade to ') + ret.nextVersion + me.getMsg(' successful! Please <b style="color: red">restart Leanote</b> for the changes to take effect.'));
+					$progress.html(me.getMsg('Upgrade to ') + ret.nextVersion + me.getMsg(' successful! Please <b style="color: red">restart Libisky</b> for the changes to take effect.'));
 					$('.cur-version').text(ret.nextVersion);
 					$('.upgrade-cancel-btn').attr('disabled', false);
 					setTimeout(function() {

@@ -1,6 +1,6 @@
 {
     "3th": "第三方登录",
-    "aboutLeanote": "关于leanote",
+    "aboutLibisky": "关于leanote",
     "aboutMe": "关于我",
     "accountSetting": "帐户设置",
     "addChildNotebook": "添加子笔记本",
@@ -71,7 +71,7 @@
     "hi": "Hi",
     "history": "历史记录",
     "home": "主页",
-    "howToInstallLeanote": "leanote安装步骤",
+    "howToInstallLibisky": "leanote安装步骤",
     "ing": "正在处理",
     "inputEmail": "请输入Email",
     "inputFriendEmail": "请输入好友邮箱",
@@ -168,7 +168,7 @@
     "verified": "已验证",
     "verifiedEmaiHasSent": "验证邮件已发送, 请及时查阅邮件并验证.",
     "verifiedNow": "现在去验证",
-    "welcomeUseLeanote": "欢迎使用leanote",
+    "welcomeUseLibisky": "欢迎使用leanote",
     "writable": "可写",
     "writingMode": "写作模式",
     "wrongEmail": "Email格式有误",
@@ -203,7 +203,7 @@
 	"Upgrade": "升级",
 	"This note is conflicted with:": "该笔记与以下笔记冲突:",
 	"Maker as resolved": "标记已解决冲突",
-	"Leanote, Not Just A Notepad": "Leanote, 不只是笔记",
+	"Libisky, Not Just A Notepad": "Libisky, 不只是笔记",
 	"Public as blog": "公开为博客",
 	"Cancel public": "取消公开为博客",
 	"Delete": "删除",
@@ -237,7 +237,7 @@
 	"Username or Email": "用户名或邮箱",
 	"Password": "密码",
 	"Sign up": "注册",
-    "Sign up Leanote": "注册Leanote",
+    "Sign up Libisky": "注册Libisky",
 	"Forget password?": "忘记密码?",
 	"Find password": "找回密码",
 
@@ -282,7 +282,7 @@
 
 	"Email or Password Error": "用户名或密码错误",
     "Invalid host": "服务地址错误",
-    "Leanote login": "登录",
+    "Libisky login": "登录",
     "Email is required": "请输入用户名或邮箱",
     "Password is required": "请输入密码",
 
@@ -290,7 +290,7 @@
     "Sign in to Self-hosted Service": "登录自建服务",
     "Self-hosted Service": "自建服务",
     "Create Local Account": "创建本地帐户",
-    "Sign in to Leanote": "登录到Leanote",
+    "Sign in to Libisky": "登录到Libisky",
     "Confirm password": "确认密码",
     "Username": "用户名",
     "User exists": "用户已存在",
@@ -309,7 +309,7 @@
     "Load Database Error": "加载数据库出错, 请尝试在帐户管理中优化数据库",
 
     "Local account warning": "本地离线帐户警告",
-    "localAccountTips": "你好, 您使用的是本地离线帐户, 您的数据只存在本地, 不会同步到Leanote服务器, 如果您不小心删除了数据或硬盘损坏, 您的数据将永久丢失. <br>所以我们推荐您使用Leanote帐户来使用该客户端, 这样您的数据将会存储到云端, 以避免失误造成的数据丢失. <br>Leanote桌面端不再支持创建本地帐户, 但您之前创建的本地帐户还是可以继续使用.",
+    "localAccountTips": "你好, 您使用的是本地离线帐户, 您的数据只存在本地, 不会同步到Libisky服务器, 如果您不小心删除了数据或硬盘损坏, 您的数据将永久丢失. <br>所以我们推荐您使用Libisky帐户来使用该客户端, 这样您的数据将会存储到云端, 以避免失误造成的数据丢失. <br>Libisky桌面端不再支持创建本地帐户, 但您之前创建的本地帐户还是可以继续使用.",
     "Don't Show Anymore": "不再提示",
 
     "ctrl/cmd+e Toggle Modify with Readonly": "ctrl/cmd+e 切换编辑与只读",
@@ -321,8 +321,8 @@
     "List View": "列表视图",
 
     "Network error, please check out your network.": "网络异常, 请检查网络或稍后再试",
-    "You need to sign in Leanote": "您需要重新登录Leanote",
-    "You need to upgrade Leanote account": "同步失败, 帐户已到期或流量已用完, 您需要升级Leanote帐户",
+    "You need to sign in Libisky": "您需要重新登录Libisky",
+    "You need to upgrade Libisky account": "同步失败, 帐户已到期或流量已用完, 您需要升级Libisky帐户",
 
     "It will not be synced before fixed.": "该笔记未解决前将不会同步",
     "Sync error": "同步失败",

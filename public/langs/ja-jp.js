@@ -1,6 +1,6 @@
 {
   "3th": "他の方でログイン",
-  "aboutLeanote": "leanoteについて",
+  "aboutLibisky": "leanoteについて",
   "aboutMe": "ホルダーについて",
   "accountSetting": "アカウント設定",
   "addChildNotebook": "サブノートブックを追加",
@@ -71,7 +71,7 @@
   "hi": "よろしく",
   "history": "履歴",
   "home": "ホームページ",
-  "howToInstallLeanote": "leanoteインストール手順",
+  "howToInstallLibisky": "leanoteインストール手順",
   "ing": "処理している",
   "inputEmail": "メールアドレス入力",
   "inputFriendEmail": "友達のメールアドレスを入力",
@@ -166,7 +166,7 @@
   "verified": "検証した",
   "verifiedEmaiHasSent": "検証メールを送信した、確認してください。",
   "verifiedNow": "直ぐに確認します",
-  "welcomeUseLeanote": "leanoteを使用して、よろしく",
+  "welcomeUseLibisky": "leanoteを使用して、よろしく",
   "writable": "書き込み可能な",
   "writingMode": "書き込みモード",
   "wrongEmail": "メールアドレスの形式が正しくありません",
@@ -201,7 +201,7 @@
   "Upgrade": "アップグレード",
   "This note is conflicted with:": "ノートの競合次の注意事項：",
   "Maker as resolved": "競合の解決策をマーキング",
-  "Leanote, Not Just A Notepad": "Leanote, ノートだけではありません。",
+  "Libisky, Not Just A Notepad": "Libisky, ノートだけではありません。",
   "Public as blog": "ブログで共有します。",
   "Cancel public": "共有ブログをキャンセルします。",
   "Delete": "削除",
@@ -235,7 +235,7 @@
   "Username or Email": "名前やメールアドレス",
   "Password": "パスワード",
   "Sign up": "アカウントを作成",
-  "Sign up Leanote": "Leanoteを作成",
+  "Sign up Libisky": "Libiskyを作成",
   "Forget password?": "パスワードをお忘れですか？",
   "Find password": "パスワードをお忘れた場合",
 
@@ -280,7 +280,7 @@
 
   "Email or Password Error": "名前やパスワードが間違った",
   "Invalid host": "サーバーアドバイスが間違った",
-  "Leanote login": "ログイン",
+  "Libisky login": "ログイン",
   "Email is required": "名前やメールアドレスを入力してください。",
   "Password is required": "パスワードを入力",
 
@@ -288,7 +288,7 @@
   "Sign in to Self-hosted Service": "自分のサーバーへログイン",
   "Self-hosted Service": "自分のサーバーを構築",
   "Create Local Account": "ローカルアカウントを作成",
-  "Sign in to Leanote": "Leanoteへログイン",
+  "Sign in to Libisky": "Libiskyへログイン",
   "Confirm password": "パスワード確認入力",
   "Username": "名前",
   "User exists": "ユーザーがもう存在している",
@@ -327,7 +327,7 @@
   "Load Database Error": "加载数据库出错, 请尝试在帐户管理中优化数据库",
 
   "Local account warning": "ローカルアカウント警告",
-  "localAccountTips": "お客様はローカルアカウント使用しているので、 データが全てローカルに保存します。 Leanote サーバーと同期できません、 一旦ローカルに何か問題が発生した、 今のデータが全て消します、これはとても怖いです。 <br>だから、Leanoteアカウントを作成してください、 これからデータが全てLeanoteサーバーに保存して、 データ損失が回避できる。<br>今後にはLeanoteアプリでローカルアカウントを作成できない、でも元々のローカルアカウント利用できます。",
+  "localAccountTips": "お客様はローカルアカウント使用しているので、 データが全てローカルに保存します。 Libisky サーバーと同期できません、 一旦ローカルに何か問題が発生した、 今のデータが全て消します、これはとても怖いです。 <br>だから、Libiskyアカウントを作成してください、 これからデータが全てLibiskyサーバーに保存して、 データ損失が回避できる。<br>今後にはLibiskyアプリでローカルアカウントを作成できない、でも元々のローカルアカウント利用できます。",
   "Don't Show Anymore": "再表示しません",
 
   "ctrl/cmd+e Toggle Modify with Readonly": "ctrl/cmd+e 編集と閲覧を変更"

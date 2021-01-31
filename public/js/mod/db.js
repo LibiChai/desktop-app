@@ -5,14 +5,14 @@ var dbClient = require('./db_client');
 
 // 数据库初始化
 // var dbPath = require('./nw.gui').App.dataPath + '/nedb';
-// var dbPath = Evt.getBasePath() + '/Users/life/Library/Application Support/Leanote' + '/nedb';
+// var dbPath = Evt.getBasePath() + '/Users/life/Library/Application Support/Libisky' + '/nedb';
 // nedb2 为了port
 var dbPath = Evt.getDBPath();
 // console.error(dbPath);
 
 // test
 if(dbPath.length < 6) {
-	var dbPath = '/Users/life/Library/Application Support/Leanote' + '/nedb2';
+	var dbPath = '/Users/life/Library/Application Support/Libisky' + '/nedb2';
 }
 
 // console.log(dbPath);

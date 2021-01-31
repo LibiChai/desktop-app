@@ -1584,12 +1584,12 @@ function initPage(initedCallback) {
                     if (err) {
                     	if (typeof err == 'object') {
 	                    	if(err['Msg'] == 'NOTLOGIN') {
-	                    		alert(getMsg('You need to sign in Leanote'));
+	                    		alert(getMsg('You need to sign in Libisky'));
 	                    		toLogin();
 	                    		return;
 							}
 							if(err['Msg'] == 'NEED-UPGRADE-ACCOUNT') {
-								alert(getMsg('You need to upgrade Leanote account'));
+								alert(getMsg('You need to upgrade Libisky account'));
 								openExternal('https://leanote.com/pricing#buy');
 								setTimeout(function () {
 		                    		toLogin();
@@ -1952,9 +1952,9 @@ function checkForUpdates() {
 function setMacTopMenu() {
     var isMac_ = isMac();
     var template = [{
-        label: 'Leanote',
+        label: 'Libisky',
         submenu: [{
-            label: 'About Leanote',
+            label: 'About Libisky',
             selector: 'orderFrontStandardAboutPanel:'
         }, {
             type: 'separator'
@@ -1964,7 +1964,7 @@ function setMacTopMenu() {
         }, {
             type: 'separator'
         }, {
-            label: 'Hide Leanote',
+            label: 'Hide Libisky',
             accelerator: 'Command+H',
             selector: 'hide:'
         }, {

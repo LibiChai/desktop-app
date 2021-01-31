@@ -1,6 +1,6 @@
 {
     "3th": "Third-party accounts",
-    "aboutLeanote": "About leanote",
+    "aboutLibisky": "About leanote",
     "aboutMe": "About me",
     "accountSetting": "Account",
     "addChildNotebook": "Add child notebook",
@@ -73,7 +73,7 @@
     "historiesNum": "We have saved at most \u003cb\u003e10\u003c/b\u003e latest histories with each note",
     "history": "Histories",
     "home": "Home",
-    "howToInstallLeanote": "How to install leanote",
+    "howToInstallLibisky": "How to install leanote",
     "ing": "processing",
     "inputEmail": "Email is required",
     "inputFriendEmail": "Friend email is required",
@@ -173,7 +173,7 @@
     "verified": "Verified",
     "verifiedEmaiHasSent": "The verification email has been sent, please check your email.",
     "verifiedNow": "Verify now",
-    "welcomeUseLeanote": "Welcome!",
+    "welcomeUseLibisky": "Welcome!",
     "writable": "Writable",
     "writingMode": "Writing Mode",
     "wrongEmail": "Wrong email",
@@ -188,7 +188,7 @@
 	"Tag": "Tag",
 	"Starred": "Starred",
 
-    "localAccountTips": "Please note that your account is local account which <b>is not the Leanote's account</b>, and your data just save onto your local disk. Once your disk is broken, the data cannot be recovered. So we recommend you to use Leanote Desktop App with Leanote account, and your data will sync to Leanote server.<p>Leanote Desktop App has disabled the feature that create a local account. You can login Leanote Desktop App with local account whitch created before. But we recommend you to use Leanote Desktop App with Leanote account.</p>",
+    "localAccountTips": "Please note that your account is local account which <b>is not the Libisky's account</b>, and your data just save onto your local disk. Once your disk is broken, the data cannot be recovered. So we recommend you to use Libisky Desktop App with Libisky account, and your data will sync to Libisky server.<p>Libisky Desktop App has disabled the feature that create a local account. You can login Libisky Desktop App with local account whitch created before. But we recommend you to use Libisky Desktop App with Libisky account.</p>",
 
 	"ForceFullSyncMsg": "Full sync will remove the current account's all local data (includes database, images and attachments) and load all data from server, are you sure ?"
 }

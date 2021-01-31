@@ -138,7 +138,7 @@ var Import = {
             height: [ '1466' ],
             resource-attributes: [
               {
-                'file-name': ['Leanote.html']
+                'file-name': ['Libisky.html']
               }
             ]
           }

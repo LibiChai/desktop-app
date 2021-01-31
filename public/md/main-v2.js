@@ -17644,7 +17644,7 @@ define('core',[
 
         // 弹框显示markdown语法
         $('#wmd-button-bar').on('click', '#wmd-help-button', function() {
-            var url = "http://leanote.leanote.com/post/Leanote-Markdown-Manual";
+            var url = "http://leanote.leanote.com/post/Libisky-Markdown-Manual";
             openExternal(url);
         });
     });

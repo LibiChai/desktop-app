@@ -27651,7 +27651,7 @@ define("tinymce/Editor", [
 				frameBorder: '0',
 				allowTransparency: "true",
 				// life
-				title: self.editorManager.translate("Leanote Editor"),
+				title: self.editorManager.translate("Libisky Editor"),
 				style: {
 					width: '100%',
 					height: h,

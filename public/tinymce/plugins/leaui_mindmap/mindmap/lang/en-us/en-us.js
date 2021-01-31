@@ -256,7 +256,7 @@ KityMinder.LANG['en-us'] = {
         'email_share': '邮件邀请',
         'url_share': '脑图 URL 地址：',
         'sns_share': '社交网络分享：',
-        'sns_share_text': '“{0}” - 我用Leanote制作的思维导图，快看看吧！（地址：{1}）',
+        'sns_share_text': '“{0}” - 我用Libisky制作的思维导图，快看看吧！（地址：{1}）',
         'none_share_description': '不分享当前脑图',
         'public_share_description': '创建任何人可见的分享',
         'share_button_text': '创建',

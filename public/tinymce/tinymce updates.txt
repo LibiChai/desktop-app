@@ -2,7 +2,7 @@
 ### [1]
 	line 670
 	// life
-	title: self.editorManager.translate("Leanote Editor"),
+	title: self.editorManager.translate("Libisky Editor"),
 
 ### [2]
 	line 1620

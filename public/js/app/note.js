@@ -1364,7 +1364,7 @@ Note.notLogin = function() {
     me.hideSpin();
     SyncService.setSyncFinished(true);
     me._syncWarningE.data('reason', 'notLogin');
-    me._syncWarningE.attr('title', getMsg('You need to sign in Leanote'));
+    me._syncWarningE.attr('title', getMsg('You need to sign in Libisky'));
 };
 Note.needUpgradeAccount = function() {
     var me = this;
@@ -1372,7 +1372,7 @@ Note.needUpgradeAccount = function() {
     SyncService.setSyncFinished(true);
     me._syncWarningE.show();
     me._syncWarningE.data('reason', 'NEED-UPGRADE-ACCOUNT');
-    me._syncWarningE.attr('title', getMsg('You need to upgrade Leanote account'));
+    me._syncWarningE.attr('title', getMsg('You need to upgrade Libisky account'));
 };
 // 点击感叹号, 处理错误
 Note.fixNetOrAuthError = function() {
@@ -1383,13 +1383,13 @@ Note.fixNetOrAuthError = function() {
         alert(getMsg('Network error, please check out your network.'));
 
     } else if (reason == 'notLogin') {
-        alert(getMsg('You need to sign in Leanote'));
+        alert(getMsg('You need to sign in Libisky'));
         // 弹出登录框登录之, 重新弹出
         toLogin();
 
-        // 需要升级Leanote
+        // 需要升级Libisky
     } else if (reason == 'NEED-UPGRADE-ACCOUNT') {
-        alert(getMsg('You need to upgrade Leanote account'));
+        alert(getMsg('You need to upgrade Libisky account'));
         openExternal('https://leanote.com/pricing#buy');
     }
 };

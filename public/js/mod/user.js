@@ -127,20 +127,20 @@ User = {
 							me.userId = user.UserId;
 							var Notebook = require('./notebook');
 							var notebookId = Common.objectId();
-							Notebook.addNotebook(notebookId, 'Leanote', '', function (notebook) {
+							Notebook.addNotebook(notebookId, 'Libisky', '', function (notebook) {
 								if (notebook) {
 									var Note = require('./note');
 									var Tag = require('./tag');
-									Tag.addOrUpdateTag('Leanote');
+									Tag.addOrUpdateTag('Libisky');
 									Tag.addOrUpdateTag('Welcome');
 									Note.updateNoteOrContent({
 										IsNew: true,
 										NoteId: Common.objectId(),
 										"NotebookId": notebookId,
-										"Title": "Welcome to Leanote 欢迎来到Leanote",
-										"Content": "<h2>Leanote, Not Just A NotePad!</h2>Welcome!<h2>Leanote, 不只是笔记</h2>欢迎!",
-										"Desc": "Leanote, Not Just A NotePad! Welcome",
-										"Tags": ['Leanote', 'Welcome']
+										"Title": "Welcome to Libisky 欢迎来到Libisky",
+										"Content": "<h2>Libisky, Not Just A NotePad!</h2>Welcome!<h2>Libisky, 不只是笔记</h2>欢迎!",
+										"Desc": "Libisky, Not Just A NotePad! Welcome",
+										"Tags": ['Libisky', 'Welcome']
 									}, function () {
 										callback(true);
 									});

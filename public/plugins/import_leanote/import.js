@@ -9,7 +9,7 @@ var Common = require('common');
 var resanitize = require('resanitize');
 
 var Import = {
-  // 解析Leanote
+  // 解析Libisky
   /*
   {
   exportDate: '2015-10-12 12:00:00',
@@ -37,7 +37,7 @@ var Import = {
   // eachFileCallback是每一个文件的
   // eachNoteFileCallback是每一个笔记的
   // filePaths = []
-  importFromLeanote: function(notebookId, filePaths, callback, 
+  importFromLibisky: function(notebookId, filePaths, callback, 
     eachFileCallback, 
     eachNoteCallback) {
     var me = this;
@@ -49,7 +49,7 @@ var Import = {
 
       try {
         var json = JSON.parse(fs.readFileSync(path));
-        me.parseLeanote(notebookId, json, function(ret) {
+        me.parseLibisky(notebookId, json, function(ret) {
           // 单个文件完成
           eachFileCallback(ret, path)
           cb();
@@ -69,7 +69,7 @@ var Import = {
   },
 
   // 2015-12-12 12:00:00
-  parseLeanoteTime: function (str) {
+  parseLibiskyTime: function (str) {
     if (!str || typeof str != 'string' || str.length != '2015-12-12 12:00:00'.length) {
       return new Date();
     }
@@ -259,8 +259,8 @@ var Import = {
           Title: note.title,
           Content: me.fixContent(note.content),
           Tags: note.tags || [],
-          CreatedTime: me.parseLeanoteTime(note.createdTime),
-          UpdatedTime: me.parseLeanoteTime(note.updatedTime),
+          CreatedTime: me.parseLibiskyTime(note.createdTime),
+          UpdatedTime: me.parseLibiskyTime(note.updatedTime),
 
           IsMarkdown: note.isMarkdown || false,
           Attachs: attachs,
@@ -287,7 +287,7 @@ var Import = {
     );
   },
 
-  parseLeanote: function (notebookId, json, callback, eachCallback) {
+  parseLibisky: function (notebookId, json, callback, eachCallback) {
     var me = this;
     var notes = json.notes || [];
     
