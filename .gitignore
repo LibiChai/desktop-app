@@ -28,3 +28,5 @@ node_modules/fs.extra
 .idea/*
 /node_modules
 ./node_modules/*
+./dist
+/dist
